@@ -1,7 +1,10 @@
 
 var algebra = require("./math");
+var a = 3;
+var b = 4;
+var c = -4;
 
 // Call the quadratic formula.
-algebra.quadratic(Math.floor(Math.random()*8)+1, Math.floor(Math.random()*4)+1);
+var quadratic = algebra.quadratic(a, b, c);
 
-console.log(algebra);
+console.log(quadratic);
