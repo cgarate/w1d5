@@ -11,7 +11,7 @@ function flipToNegative(n) {
   }
 }
 
-module.exports {
+module.exports = {
   // Returns x given a, b, and c according to the Quadratic formula.
   quadratic: function (a, b, c) {
     var result = {};
