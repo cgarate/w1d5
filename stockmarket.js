@@ -1,12 +1,22 @@
 
+function max(arr) {
+  var theMax = 0;
 
-var arr = [45,24,35,31,40,38,11];
-var profit = 0;
-var temp = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > arr[theMax]) {
+      theMax = i;
+    }
+  }
+  return arr[theMax];
 
-console.log(arr);
+}
 
-var result = arr.map( function (v, i, a) {
+function maxProfit(anArray) {
+
+  var profit = 0;
+  var temp = 0;
+
+  var result = anArray.map( function (v, i, a) {
   profit = 0;
   for (var x = i+1; x < a.length; x++) {
 
@@ -15,9 +25,13 @@ var result = arr.map( function (v, i, a) {
       profit = temp;
     }
   }
-  return profit;
+  // convert number to positive
+  return profit * (-1);
 
-})
+  })
 
+  return result;
 
-console.log(result);
+}
+
+console.log(max(maxProfit([45,24,35,31,40,38,11])));
